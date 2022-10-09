@@ -1,0 +1,213 @@
+1663570394618	geckodriver	INFO	Listening on 127.0.0.1:58952
+1663570397648	mozrunner::runner	INFO	Running command: "D:\\huohu\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\zkthink\\AppData\\Local\\Temp\\rust_mozprofileZAwcbj"
+1663570398522	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\zkthink\\AppData\\Local\\Temp\\rust_mozprofileZAwcbj\\search.json.mozlz4", (void 0)))
+1663570401863	Marionette	INFO	Listening on port 58972
+1663570402006	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1663570445211	Marionette	INFO	Stopped listening on port 58972
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1663570497900	geckodriver	INFO	Listening on 127.0.0.1:59380
+1663570500943	mozrunner::runner	INFO	Running command: "D:\\huohu\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\zkthink\\AppData\\Local\\Temp\\rust_mozprofile266lSf"
+1663570501535	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\zkthink\\AppData\\Local\\Temp\\rust_mozprofile266lSf\\search.json.mozlz4", (void 0)))
+1663570503228	Marionette	INFO	Listening on port 59388
+1663570503625	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1663576304868	Marionette	INFO	Stopped listening on port 59388
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+\\Local\\Temp\\rust_mozprofileB66s0G"
+1663570620942	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\zkthink\\AppData\\Local\\Temp\\rust_mozprofileB66s0G\\search.json.mozlz4", (void 0)))
+1663570622646	Marionette	INFO	Listening on port 59508
+1663570622734	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://pss.bdstatic.com/r/www/cache/static/protocol/https/plugins/every_cookie_4644b13.js, line 4: ReferenceError: c is not defined
+JavaScript warning: https://hectorstatic.baidu.com/96c9c06653ba892e.js, line 3: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://csdnimg.cn/public/common/libs/jquery/jquery-1.9.1.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://aeu.alicdn.com/waf/antidomxss_v640.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://csdnimg.cn/public/common/libs/jquery/jquery-1.9.1.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://dlswbr.baidu.com/heicha/mw/abclite-2036-s.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://g.alicdn.com/secdev/sufei_data/3.9.10/index.js, line 1: WebGL context was lost.
+JavaScript warning: https://g.alicdn.com/AWSC/et/1.62.6/et_n.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://g.alicdn.com/AWSC/et/1.62.6/et_n.js, line 3: WebGL context was lost.
+JavaScript warning: https://g.alicdn.com/??xlly/spl/rp.js,secdev/nsv/1.0.78/ns_e_88_3_n.js?v=1, line 5: WebGL context was lost.
+JavaScript error: , line 0: uncaught exception: timeout
+JavaScript error: , line 0: uncaught exception: timeout
+JavaScript warning: https://g.alicdn.com/AWSC/et/1.62.6/et_n.js, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://g.alicdn.com/AWSC/et/1.62.6/et_n.js, line 3: WebGL context was lost.
+JavaScript warning: https://g.alicdn.com/??xlly/spl/rp.js,secdev/nsv/1.0.78/ns_e_88_3_n.js?v=1, line 5: WebGL context was lost.
+JavaScript warning: https://g.alicdn.com/secdev/sufei_data/3.9.11/index.js, line 1: WebGL context was lost.
+JavaScript warning: https://csdnimg.cn/public/common/libs/jquery/jquery-1.9.1.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript error: https://g.csdnimg.cn/tingyun/1.8.5/blog.js, line 1: uncaught exception: TagError: adsbygoogle.push() error: No slot size for availableWidth=0
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.baidu.com"
+JavaScript error: https://cn.bing.com/rp/cS8IjHEHprNojN_YYyqouhRo_kc.br.js, line 1: TypeError: i is null
+JavaScript error: https://cn.bing.com/rp/cS8IjHEHprNojN_YYyqouhRo_kc.br.js, line 1: TypeError: i is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://cn.bing.com"
+JavaScript warning: https://csdnimg.cn/public/common/libs/jquery/jquery-1.9.1.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1663571734121	Marionette	INFO	Stopped listening on port 59508
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PContent::Reply_DiscardBrowsingContext) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PContent::Reply_DiscardBrowsingContext) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PContent::Msg_DestroyBrowsingContextGroup) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PSessionStorageObserver::Msg_Observe) Channel closing: too late to send/recv, messages will be lost
+
+1663580440972	geckodriver	INFO	Listening on 127.0.0.1:50201
+1663580444008	mozrunner::runner	INFO	Running command: "D:\\huohu\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\zkthink\\AppData\\Local\\Temp\\rust_mozprofileyQ3O5j"
+1663580445050	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\zkthink\\AppData\\Local\\Temp\\rust_mozprofileyQ3O5j\\search.json.mozlz4", (void 0)))
+1663580448390	Marionette	INFO	Listening on port 50212
+1663580449443	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1663580539637	Marionette	INFO	Stopped listening on port 50212
+3580533396	mozrunner::runner	INFO	Running command: "D:\\huohu\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\zkthink\\AppData\\Local\\Temp\\rust_mozprofiletYZJ12"
+1663580533882	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\zkthink\\AppData\\Local\\Temp\\rust_mozprofiletYZJ12\\search.json.mozlz4", (void 0)))
+1663580535724	Marionette	INFO	Listening on port 50339
+1663580536094	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1663580538338	Marionette	INFO	Stopped listening on port 50339
+1663580542314	geckodriver	INFO	Listening on 127.0.0.1:50376
+1663580545347	mozrunner::runner	INFO	Running command: "D:\\huohu\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\zkthink\\AppData\\Local\\Temp\\rust_mozprofileUzVuYB"
+1663580545941	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\zkthink\\AppData\\Local\\Temp\\rust_mozprofileUzVuYB\\search.json.mozlz4", (void 0)))
+1663580547737	Marionette	INFO	Listening on port 50387
+1663580548020	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1663580909917	Marionette	INFO	Stopped listening on port 50387
+3580623834	mozrunner::runner	INFO	Running command: "D:\\huohu\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\zkthink\\AppData\\Local\\Temp\\rust_mozprofileUEWK8P"
+1663580624313	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\zkthink\\AppData\\Local\\Temp\\rust_mozprofileUEWK8P\\search.json.mozlz4", (void 0)))
+1663580626124	Marionette	INFO	Listening on port 50498
+1663580626527	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1663580908456	Marionette	INFO	Stopped listening on port 50498
+3580693423	mozrunner::runner	INFO	Running command: "D:\\huohu\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\zkthink\\AppData\\Local\\Temp\\rust_mozprofileSW6w94"
+1663580693880	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\zkthink\\AppData\\Local\\Temp\\rust_mozprofileSW6w94\\search.json.mozlz4", (void 0)))
+1663580695714	Marionette	INFO	Listening on port 50604
+1663580696119	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1663580701441	Marionette	INFO	Stopped listening on port 50604
+[Parent 10152, IPC I/O Parent] WARNING: DuplicateHandle failed for handle 0 in TransferHandles: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:723
+1663581084156	geckodriver	INFO	Listening on 127.0.0.1:51277
+1663581087190	mozrunner::runner	INFO	Running command: "D:\\huohu\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\zkthink\\AppData\\Local\\Temp\\rust_mozprofilenHwfzn"
+1663581087747	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\zkthink\\AppData\\Local\\Temp\\rust_mozprofilenHwfzn\\search.json.mozlz4", (void 0)))
+1663581089373	Marionette	INFO	Listening on port 51303
+1663581089400	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1663581092617	Marionette	INFO	Stopped listening on port 51303
+1663581497387	geckodriver	INFO	Listening on 127.0.0.1:52004
+1663581500427	mozrunner::runner	INFO	Running command: "D:\\huohu\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\zkthink\\AppData\\Local\\Temp\\rust_mozprofile50AXnj"
+1663581501114	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\zkthink\\AppData\\Local\\Temp\\rust_mozprofile50AXnj\\search.json.mozlz4", (void 0)))
+1663581502992	Marionette	INFO	Listening on port 52014
+1663581503126	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1663581507050	Marionette	INFO	Stopped listening on port 52014
+1663582299864	geckodriver	INFO	Listening on 127.0.0.1:52856
+1663582302898	mozrunner::runner	INFO	Running command: "D:\\huohu\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\zkthink\\AppData\\Local\\Temp\\rust_mozprofileuZUi7g"
+1663582303616	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\zkthink\\AppData\\Local\\Temp\\rust_mozprofileuZUi7g\\search.json.mozlz4", (void 0)))
+1663582306114	Marionette	INFO	Listening on port 52868
+1663582306467	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1663582314613	Marionette	INFO	Stopped listening on port 52868
+1663582322226	geckodriver	INFO	Listening on 127.0.0.1:52919
+1663582325261	mozrunner::runner	INFO	Running command: "D:\\huohu\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\zkthink\\AppData\\Local\\Temp\\rust_mozprofileyUPxEI"
+1663582325987	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\zkthink\\AppData\\Local\\Temp\\rust_mozprofileyUPxEI\\search.json.mozlz4", (void 0)))
+1663582327860	Marionette	INFO	Listening on port 52928
+1663582329323	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1663582431302	Marionette	INFO	Stopped listening on port 52928
+1663582779515	geckodriver	INFO	Listening on 127.0.0.1:53438
+1663582782550	mozrunner::runner	INFO	Running command: "D:\\huohu\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\zkthink\\AppData\\Local\\Temp\\rust_mozprofile2SQoAH"
+1663582783258	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\zkthink\\AppData\\Local\\Temp\\rust_mozprofile2SQoAH\\search.json.mozlz4", (void 0)))
+1663582785197	Marionette	INFO	Listening on port 53450
+1663582785275	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1663582789918	Marionette	INFO	Stopped listening on port 53450
+1663645432225	geckodriver	INFO	Listening on 127.0.0.1:55823
+1663645435276	mozrunner::runner	INFO	Running command: "D:\\huohu\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\zkthink\\AppData\\Local\\Temp\\rust_mozprofileUzHKtu"
+1663645436117	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\zkthink\\AppData\\Local\\Temp\\rust_mozprofileUzHKtu\\search.json.mozlz4", (void 0)))
+1663645438923	Marionette	INFO	Listening on port 55844
+1663645439026	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1663645452791	Marionette	INFO	Stopped listening on port 55844
+1664166360546	geckodriver	INFO	Listening on 127.0.0.1:52609
+1664166363582	mozrunner::runner	INFO	Running command: "D:\\huohu\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\zkthink\\AppData\\Local\\Temp\\rust_mozprofile128w4W"
+1664166364475	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\zkthink\\AppData\\Local\\Temp\\rust_mozprofile128w4W\\search.json.mozlz4", (void 0)))
+1664166366514	Marionette	INFO	Listening on port 52619
+1664166366820	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1664166373789	Marionette	INFO	Stopped listening on port 52619
+1664173772570	geckodriver	INFO	Listening on 127.0.0.1:65361
+1664173775609	mozrunner::runner	INFO	Running command: "D:\\huohu\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\zkthink\\AppData\\Local\\Temp\\rust_mozprofileiI1a2N"
+1664173776498	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\zkthink\\AppData\\Local\\Temp\\rust_mozprofileiI1a2N\\search.json.mozlz4", (void 0)))
+1664173778591	Marionette	INFO	Listening on port 65369
+1664173778860	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1664173784903	Marionette	INFO	Stopped listening on port 65369
+1664174258618	geckodriver	INFO	Listening on 127.0.0.1:49266
+1664174261657	mozrunner::runner	INFO	Running command: "D:\\huohu\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\zkthink\\AppData\\Local\\Temp\\rust_mozprofileE6cuWa"
+1664174262252	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\zkthink\\AppData\\Local\\Temp\\rust_mozprofileE6cuWa\\search.json.mozlz4", (void 0)))
+1664174264049	Marionette	INFO	Listening on port 49274
+1664174264359	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1664174305493	Marionette	INFO	Stopped listening on port 49274
+1664174320796	geckodriver	INFO	Listening on 127.0.0.1:49336
+1664174323830	mozrunner::runner	INFO	Running command: "D:\\huohu\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\zkthink\\AppData\\Local\\Temp\\rust_mozprofilennCmcm"
+1664174324400	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\zkthink\\AppData\\Local\\Temp\\rust_mozprofilennCmcm\\search.json.mozlz4", (void 0)))
+1664174326048	Marionette	INFO	Listening on port 49344
+1664174326531	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://hectorstatic.baidu.com/96c9c06653ba892e.js, line 3: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://csdnimg.cn/public/common/libs/jquery/jquery-1.9.1.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript error: https://g.csdnimg.cn/tingyun/1.8.5/blog.js, line 1: uncaught exception: TagError: adsbygoogle.push() error: No slot size for availableWidth=0
+JavaScript warning: https://csdnimg.cn/public/common/libs/jquery/jquery-1.9.1.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.baidu.com"
+JavaScript error: https://cdn.sstatic.net/Js/stub.en.js?v=0e3ada576039, line 1: ReferenceError: $ is not defined
+JavaScript error: https://stackoverflow.com/questions/34109875/python-attributeerror-page-object-has-no-attribute-print-out, line 46: TypeError: StackExchange.ready is not a function
+JavaScript error: https://cdn.sstatic.net/Js/stub.en.js?v=0e3ada576039, line 1: ReferenceError: $ is not defined
+JavaScript error: https://stackoverflow.com/questions/34109875/python-attributeerror-page-object-has-no-attribute-print-out, line 82: TypeError: StackExchange.using is undefined
+JavaScript error: https://stackoverflow.com/questions/34109875/python-attributeerror-page-object-has-no-attribute-print-out, line 316: TypeError: StackExchange.ready is not a function
+JavaScript error: https://stackoverflow.com/questions/34109875/python-attributeerror-page-object-has-no-attribute-print-out, line 1153: TypeError: StackExchange.ifUsing is not a function
+JavaScript error: https://stackoverflow.com/questions/34109875/python-attributeerror-page-object-has-no-attribute-print-out, line 1164: TypeError: StackExchange.ready is not a function
+JavaScript error: https://stackoverflow.com/questions/34109875/python-attributeerror-page-object-has-no-attribute-print-out, line 1264: TypeError: StackExchange.ready is not a function
+JavaScript error: https://stackoverflow.com/questions/34109875/python-attributeerror-page-object-has-no-attribute-print-out, line 1309: TypeError: StackExchange.ready is not a function
+JavaScript error: https://stackoverflow.com/questions/34109875/python-attributeerror-page-object-has-no-attribute-print-out, line 1683: TypeError: StackExchange.ready is not a function
+JavaScript error: https://stackoverflow.com/questions/34109875/python-attributeerror-page-object-has-no-attribute-print-out, line 1692: TypeError: window.StackExchange.ready is not a function
+JavaScript error: https://stackoverflow.com/questions/34109875/python-attributeerror-page-object-has-no-attribute-print-out, line 1692: TypeError: this.opt is undefined
+JavaScript error: https://stackoverflow.com/questions/34109875/python-attributeerror-page-object-has-no-attribute-print-out, line 1849: TypeError: StackExchange.ready is not a function
+1664174710596	Marionette	INFO	Stopped listening on port 49344
+1664174884443	geckodriver	INFO	Listening on 127.0.0.1:58595
+1664174887474	mozrunner::runner	INFO	Running command: "D:\\huohu\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\zkthink\\AppData\\Local\\Temp\\rust_mozprofileWJylMY"
+1664174888139	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\zkthink\\AppData\\Local\\Temp\\rust_mozprofileWJylMY\\search.json.mozlz4", (void 0)))
+1664174890065	Marionette	INFO	Listening on port 58605
+1664174890302	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1664174931606	Marionette	INFO	Stopped listening on port 58605
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1664175167684	geckodriver	INFO	Listening on 127.0.0.1:58036
+1664175170731	mozrunner::runner	INFO	Running command: "D:\\huohu\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\zkthink\\AppData\\Local\\Temp\\rust_mozprofile9UxG6v"
+1664175171317	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\zkthink\\AppData\\Local\\Temp\\rust_mozprofile9UxG6v\\search.json.mozlz4", (void 0)))
+1664175172942	Marionette	INFO	Listening on port 58044
+1664175173441	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1664175191706	Marionette	INFO	Stopped listening on port 58044
+1664175200511	geckodriver	INFO	Listening on 127.0.0.1:58123
+1664175203558	mozrunner::runner	INFO	Running command: "D:\\huohu\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\zkthink\\AppData\\Local\\Temp\\rust_mozprofilepWCBIO"
+1664175204145	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\zkthink\\AppData\\Local\\Temp\\rust_mozprofilepWCBIO\\search.json.mozlz4", (void 0)))
+1664175205837	Marionette	INFO	Listening on port 58131
+1664175206270	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1664175271715	Marionette	INFO	Stopped listening on port 58131
+1665223307257	geckodriver	INFO	Listening on 127.0.0.1:56984
+1665223310301	mozrunner::runner	INFO	Running command: "D:\\huohu\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\zkthink\\AppData\\Local\\Temp\\rust_mozprofileRGEXKR"
+1665223311407	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\zkthink\\AppData\\Local\\Temp\\rust_mozprofileRGEXKR\\search.json.mozlz4", (void 0)))
+1665223313451	Marionette	INFO	Listening on port 56994
+1665223313724	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1665223321710	Marionette	INFO	Stopped listening on port 56994
