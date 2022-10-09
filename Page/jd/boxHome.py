@@ -4,11 +4,9 @@
 LOCATOR : 所有页面元素的定位器
 首页页面元素的定位和操作均写在该类中
 """
-
 from Page import basePage
 from selenium.webdriver.common.by import By
 import logging;logging.basicConfig(level=logging.INFO)
-
 
 class IndexPage(basePage.BasePage):
     """
@@ -31,7 +29,7 @@ class IndexPage(basePage.BasePage):
     def open_index_page(self, sso):
         """打开首页"""
 
-        domain = "https://ceres.zkthink.com/"
+        domain = 'https://ceres.zkthink.com'
         indexurl = '/pc/#/index'
         url = domain + indexurl
         self.openpage(url)

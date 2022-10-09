@@ -19,47 +19,47 @@ class BasePage:
     def __init__(self,driver): #构造函数
         self.driver = driver
 
-def openpage(self,url):
+    def openpage(self,url):
         """ 打开页面"""
         self.driver.get(url)
         self.driver.implicitly_wait(10) #隐式等待默认时间
         self.driver.maximize_window() #最大化窗口
 
-def getelement(self,*locator):
+    def getelement(self,*locator):
         """获取页面元素"""
         return self.driver.find_element(*locator)
 
-def getelements(self,*locator):
+    def getelements(self,*locator):
         """获取页面元素集"""
         return self.driver.find_elements(*locator)
 
-def getchild(self,pageelement,*locator):
+    def getchild(self,pageelement,*locator):
         """获取页面子节点"""
         return pageelement.find_element(*locator)
 
-def getchilds(self,pageelement,*locator):
+    def getchilds(self,pageelement,*locator):
         """获取元素子节点集"""
         return pageelement.find_elements(*locator)
 
-def getelement_wait_presence(self,*locator):
+    def getelement_wait_presence(self,*locator):
         ele = WebDriverWait(self.driver, 10, 0.2).until(
             EC.presence_of_element_located(locator)
         )  # 等元素可定位时
         return ele
 
-def refresh(self):
+    def refresh(self):
         """刷新页面"""
         self.driver.refresh()
 
-def movetoelement(self,pageelement):
+    def movetoelement(self,pageelement):
         """鼠标移到pageelement上"""
         actionchains = ActionChains(self.driver)
         actionchains.move_to_element(pageelement).perform()  # 鼠标移到图标上
 
-def wait(self,sec):
+    def wait(self,sec):
         sleep(sec)
 
-def getscreenshot(self,filename="截图"):
+    def getscreenshot(self,filename="截图"):
         """带有时间戳的截图"""
         screenshot_dir = './screenshot'  # 截图根目录
         if not os.path.exists(screenshot_dir): #不存在则创建该目录
@@ -75,6 +75,6 @@ def getscreenshot(self,filename="截图"):
         filepath = os.path.join(screenshot_date_dir,filename)
         self.driver.get_screenshot_as_file(filepath) # 截图
 
-def closepage(self):
+    def closepage(self):
         """关闭浏览器"""
         self.driver.quit()
