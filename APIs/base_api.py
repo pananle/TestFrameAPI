@@ -1,5 +1,3 @@
- # 接口自动化接口基类
-
 import logging
 import random
 import importlib
@@ -9,7 +7,6 @@ import unittest
 from hashlib import md5
 from ipaddress import ip_address
 from Comm.compare import CompareStr
-
 
 logger = logging.getLogger('main.api')
 req_prefix = 'req.'
@@ -45,7 +42,7 @@ def _get_cmd(key, dict_name='payload'):
 def check_result(unittest_testcase, x, y):
     # 只有x,y完全相同才能通过，任意不同则返回失败。建议自己在用例中做结果检查
     testcase = unittest_testcase
-    diff = json_compare(x, y)
+    diff = CompareStr(x, y)
     testcase.assertEqual(x, y)
 
 
