@@ -40,7 +40,7 @@ def _get_all_conf():
 config = _get_all_conf()
 sys_cfg = config['sys']
 smtp_cfg = config['smtp']
-# print(sys_cfg)
+print(sys_cfg)
 # print(smtp_cfg)
 # print(smtp_cfg['host'])
 
