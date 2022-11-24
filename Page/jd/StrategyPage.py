@@ -1,5 +1,5 @@
-#coding:utf-8
-
+# coding:utf-8
+# 页面对象
 """
 策略页面类
 LOCATOR : 所有页面元素的定位器

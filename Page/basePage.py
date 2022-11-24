@@ -2,8 +2,6 @@
 """
 页面基类
 所有页面通用的方法封装
-dinghanhua
-2019-01
 """
 
 from time import sleep

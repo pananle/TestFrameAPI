@@ -4,7 +4,7 @@
 """
 
 from APIs import base_api
-from Page.jd.boxHome import IndexPage
+from Page.shops.shopHome import IndexPage
 from Page.jd.StrategyPage import StrategyPage
 from Comm.launch_browser import launch_browser
 import unittest
