@@ -1,19 +1,20 @@
 # 扫描用例、执行用例、输出报告、发送邮件
 # -*- coding: utf-8 -*-
 
-
 import unittest
 import os
 import time
 import logging
 from Comm.Email import Email
 from Comm.Log import log_init
-from Comm import HTMLTestRunner
+from Comm.HTMLTestRunner import HTMLTestRunner
+from BeautifulReport import BeautifulReport
+
 # 定义各目录
 ProjectHome = os.path.split(os.path.realpath(__file__))[0]
 PageObjectPath = os.path.join(ProjectHome, "Page")
-TestCasePath = os.path.join(ProjectHome, "TestCase")
-ReportPath = os.path.join(ProjectHome, "Report")
+TestCasePath = os.path.join(ProjectHome, "TestCases")
+ReportPath = os.path.join(ProjectHome, "reports")
 
 #对测试结果关键信息进行汇总，做为邮件正文
 def summary_format(result):
@@ -48,10 +49,10 @@ def get_suite(case_path=TestCasePath, rule="test_*.py"):
 # 执行用例，生成测试报告，并返回报告附件路径、邮件正文内容
 def suite_run(unittest_suite):
     """执行所有的用例, 并把结果写入测试报告"""
-    run_result = HTMLTestRunner(unittest_suite)
+    run_result = BeautifulReport(unittest_suite)
     now = time.strftime("%Y%m%d%H%M%S", time.localtime())
     filename = now + '_report.html'
-    run_result.report(filename=filename, description=now, report_dir=ReportPath)
+    run_result.report(filename=filename, description=now, report_dir=ReportPath)#
     rpt_summary = summary_format(run_result.fields)
     return os.path.join(ReportPath, filename), rpt_summary
 

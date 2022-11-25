@@ -1,78 +1,61 @@
-# 封装邮件，用于发送测试报告
-# 实现邮件功能，用于发送测试报告。使用python的smtplib模块实现
+# -*- coding: utf-8 -*-
+# @Time    : 2018/7/19 下午5:23
+# @Author  : WangJuan
+# @File    : Email.py
 
+"""
+封装发送邮件的方法
+
+"""
 import smtplib
-import os
-import logging
-from email.mime.text import MIMEText
-from email.mime.application import MIMEApplication
-from email.mime.multipart import MIMEMultipart
+import time
 from email.header import Header
-from Conf.config import smtp_cfg, email_cfg
-
-_FILESIZE = 20  # 单位M， 单个附件大小
-_FILECOUNT = 10  # 附件个数
-_smtp_cfg = smtp_cfg
-_email_cfg = email_cfg
-_logger = logging.getLogger('main.email')
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+from Comm import Consts
+from Comm import Log
+from Conf.config import Config
 
 
-class Email:
-    def __init__(self, subject, context=None, attachment=None):
-        self.subject = subject
-        self.context = context
-        self.attachment = attachment
-        self.message = MIMEMultipart()
-        self._message_init()
+class SendMail:
 
-    def _message_init(self):
-        if self.subject:
-            self.message['subject'] = Header(self.subject, 'utf-8')  # 邮件标题
-        else:
-            raise ValueError("Invalid subject")
+    def __init__(self):
+        self.config = Config()
+        self.log = Log.MyLog()
 
-        self.message['from'] = _email_cfg['sender']  # from
-        self.message['to'] = _email_cfg['receivers']  # to
+    def sendMail(self):
+        msg = MIMEMultipart()
+        # body = """
+        # <h3>Hi，all</h3>
+        # <p>本次接口自动化测试报告如下。</p>
+        # """
+        # mail_body = MIMEText(body, _subtype='html', _charset='utf-8')
+        stress_body = Consts.STRESS_LIST
+        result_body = Consts.RESULT_LIST
+        body2 = 'Hi，all\n本次接口自动化测试报告如下：\n   接口响应时间集：%s\n   接口运行结果集：%s' % (stress_body, result_body)
+        mail_body2 = MIMEText(body2, _subtype='plain', _charset='utf-8')
+        tm = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
+        msg['Subject'] = Header("接口自动化测试报告"+"_"+tm, 'utf-8')
+        msg['From'] = self.config.sender
+        receivers = self.config.receiver
+        toclause = receivers.split(',')
+        msg['To'] = ",".join(toclause)
+        # msg.attach(mail_body)
 
-        if self.context:
-            self.message.attach(MIMEText(self.context, 'html', 'utf-8'))  # 邮件正文内容
-        # 邮件附件
-        if self.attachment:
-            if isinstance(self.attachment, str):
-                self._attach(self.attachment)
-            if isinstance(self.attachment, list):
-                count = 0
-                for each in self.attachment:
-                    if count <= _FILECOUNT:
-                        self._attach(each)
-                        count += 1
-                    else:
-                        _logger.warning('Attachments is more than ', _FILECOUNT)
-                        break
+        msg.attach(mail_body2)
 
-    def _attach(self, file):
-        if os.path.isfile(file) and os.path.getsize(file) <= _FILESIZE * 1024 * 1024:
-            attach = MIMEApplication(open(file, 'rb').read())
-            attach.add_header('Content-Disposition', 'attachment', filename=os.path.basename(file))
-            attach["Content-Type"] = 'application/octet-stream'
-            self.message.attach(attach)
-        else:
-            _logger.error('The attachment is not exist or more than %sM: %s' % (_FILESIZE, file))
-
-    def send_mail(self):
-        s = smtplib.SMTP_SSL(_smtp_cfg['host'], int(_smtp_cfg['port']))
-        result = True
         try:
-            s.login(self._smtp_cfg['user'], self._smtp_cfg['passwd'])
-            s.sendmail(self._smtp_cfg['sender'], self._smtp_cfg['receivers'], self.message.as_string())
-        except smtplib.SMTPException as e:
-            result = False
-            _logger.error('Send mail failed', exc_info=True)
-        finally:
-            s.close()
-        return result
+            smtp = smtplib.SMTP()
+            smtp.connect(self.config.smtpserver)
+            smtp.login(self.config.username, self.config.password)
+            smtp.sendmail(self.config.sender, toclause, msg.as_string())
+        except Exception as e:
+            print(e)
+            print("发送失败")
+            self.log.error("邮件发送失败，请检查邮件配置")
 
-# # 邮件初始化发送时的调用方式
-# mail = Email('TestFrame11', 'context', 'zalyquanma.xlsx')
-# send = mail.send_mail()
-# print(send)
+        else:
+            print("发送成功")
+            self.log.info("邮件发送成功")
+        finally:
+            smtp.quit()

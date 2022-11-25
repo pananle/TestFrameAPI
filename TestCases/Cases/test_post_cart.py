@@ -9,12 +9,12 @@ from urllib import parse
 from TestCases.lib import cart
 from TestCases.lib.re_token import get_token
 
-class Test_login(unittest.TestCase):
+class Test_cart(unittest.TestCase):
 
     @classmethod
     def setUpClass(self):
         self.token = get_token()
-        print("获取到当前用例token值：%s" % self.token)
+        # print("获取到当前用例token值：%s" % self.token)
         self.url = "https://ceres.zkthink.com/api/cart/addCart" #添加购物车
         self.url1 = "https://ceres.zkthink.com/api/cart/delete" #删除购物车商品
         self.url2 = "https://ceres.zkthink.com/api/cart/updateNumber" #修改购物车数量

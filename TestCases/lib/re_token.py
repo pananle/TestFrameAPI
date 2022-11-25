@@ -7,7 +7,6 @@ cur = os.path.dirname(os.path.realpath(__file__))
 def get_token(yamlName="token.yaml"):
     '''
     从token.yaml读取token值
-    :param yamlName: 配置文件名称
     :return: token值
     '''
     p = os.path.join(cur, yamlName)

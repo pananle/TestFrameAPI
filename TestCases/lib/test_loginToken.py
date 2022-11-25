@@ -7,6 +7,7 @@ import json
 
 
 def test_loginToken():
+    '''token截取'''
     host = 'https://ceres.zkthink.com/api/app/'  # 接口地址ip与port
     url = host + "login"
     # 登录的参数数据
