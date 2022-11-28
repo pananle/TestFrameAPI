@@ -2,7 +2,7 @@
 # -*- coding:utf-8 -*-
 
 import pymysql
-from Conf.config import sql_cfg
+from Conf.config import DB
 
 """
 # host = sql_cfg['host']

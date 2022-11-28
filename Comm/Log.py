@@ -95,3 +95,4 @@ if __name__ == "__main__":
     MyLog.warning("This is warning message")
     MyLog.error("This is error")
     MyLog.critical("This is critical message")
+

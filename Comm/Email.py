@@ -1,7 +1,4 @@
 # -*- coding: utf-8 -*-
-# @Time    : 2018/7/19 下午5:23
-# @Author  : WangJuan
-# @File    : Email.py
 
 """
 封装发送邮件的方法

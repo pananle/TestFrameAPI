@@ -5,8 +5,8 @@ import unittest
 import os
 import time
 import logging
-from Comm.Email import Email
-from Comm.Log import log_init
+from Comm.Email import SendMail
+from Comm.Log import MyLog
 from Comm.HTMLTestRunner import HTMLTestRunner
 from BeautifulReport import BeautifulReport
 
@@ -30,7 +30,7 @@ def summary_format(result):
 # 发送邮件
 def send_email(file, context):
     title = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()) + '自动化测试结果'
-    mail = Email(title, context, file)
+    mail = SendMail(title, context, file)
     send = mail.send_mail()
     if send:
         print('测试报告邮件发送成功')

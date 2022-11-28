@@ -30,6 +30,7 @@ class Config:
     VALUE_RECEIVER = "receiver"
     VALUE_USERNAME = "username"
     VALUE_PASSWORD = "password"
+    # [DB]
 
     # path
     path_dir = str(os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir)))
