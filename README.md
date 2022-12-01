@@ -16,3 +16,5 @@ reports 报告
 TestCases   用例和数据模版
 
 mainAPI     运行数据
+
+pytest --report=cereshop.html --title=测试报告 --tester=anle --desc=业务逻辑  --template=2
