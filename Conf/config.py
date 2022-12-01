@@ -1,7 +1,5 @@
 #!user/bin/env python​​
 # -*- coding:utf-8 -*-
-# 潘先生
-# 当前时间: 2022.9.9
 # config.py文件实现config.ini文件的读取
 
 

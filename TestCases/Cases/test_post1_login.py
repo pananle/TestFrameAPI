@@ -7,6 +7,8 @@ import logging
 import demjson
 from urllib import parse
 from TestCases.lib import login
+from ruamel import yaml
+import json
 
 class Test_login(unittest.TestCase):
 
@@ -32,6 +34,14 @@ class Test_login(unittest.TestCase):
         print(r.json())
         assert r.status_code == 200
         assert r.json()["message"] == "成功"
+        #print(r.json()["data"]["token"])
+        yamlpath = r'D:\TestFrame\TestCases\lib\token.yaml'  # 保存文件路径
+        # 提取token字段
+        tokenValue = {
+            'token': r.json()["data"]["token"]
+        }
+        with open(yamlpath, "w", encoding="utf-8") as f:
+            yaml.dump(tokenValue, f, Dumper=yaml.RoundTripDumper)
         logging.info(
             f"case:授权登录，成功\n请求地址：{r.url}\t请求方式:{r.request.method}\n请求头：{r.request.headers}\n请求正文：{parse.unquote(r.request.body)}\n响应头：{r.headers}\n响应正文：{r.text}\n")
 

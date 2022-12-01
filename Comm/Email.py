@@ -2,7 +2,6 @@
 
 """
 封装发送邮件的方法
-
 """
 import smtplib
 import time
@@ -12,7 +11,6 @@ from email.mime.text import MIMEText
 from Comm import Consts
 from Comm import Log
 from Conf.config import Config
-
 
 class SendMail:
 
