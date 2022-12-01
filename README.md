@@ -1,6 +1,7 @@
 # TestFrame
-基于Pytest+request+Allure的接口自动化开源框架1
-mainAPI目录配置
+基于Pytest+request+Allure的接口自动化开源框架
+
+
 Comm    公共封装文件
 Conf    配置文件
 log     日志存放
