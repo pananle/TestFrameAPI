@@ -9,14 +9,15 @@ from email.header import Header
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from Comm import Consts
-from Comm import Log
+from Comm.loggerController import log
+from Comm import loggerController
 from Conf.config import Config
 
 class SendMail:
 
     def __init__(self):
         self.config = Config()
-        self.log = Log.MyLog()
+        self.log = log
 
     def sendMail(self):
         msg = MIMEMultipart()
