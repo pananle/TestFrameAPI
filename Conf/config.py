@@ -2,10 +2,8 @@
 # -*- coding:utf-8 -*-
 # config.py文件实现config.ini文件的读取
 
-
-
 from configparser import ConfigParser
-from Comm import Log
+from Comm.loggerController import log
 import os
 
 class Config:
@@ -38,7 +36,7 @@ class Config:
         初始化
         """
         self.config = ConfigParser()
-        self.log = Log.MyLog()
+        self.log = log
         self.conf_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'config.ini')
         self.xml_report_path = Config.path_dir+'/Report/xml'
         self.html_report_path = Config.path_dir+'/Report/html'

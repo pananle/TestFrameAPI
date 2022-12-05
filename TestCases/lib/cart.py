@@ -2,7 +2,7 @@
 # 购物车数据模块
 
 def postCatData():
-    data = {"skuId": 2091,
+    data = {"skuId": 591,
             "number": 1
         }
     return data

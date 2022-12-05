@@ -9,8 +9,7 @@
 """
 import os
 import pytest
-
-from Comm import Log
+from Comm import loggerController
 from Comm import Shell
 from Conf import config
 from Comm import Email
@@ -20,7 +19,7 @@ warnings.filterwarnings("ignore")
 
 if __name__ == '__main__':
     conf = config.Config()
-    log = Log.MyLog()
+    log = loggerController.ApiAutoLog()
     log.info('初始化配置文件, path=' + conf.conf_path)
 
     # 获取报告输出位置

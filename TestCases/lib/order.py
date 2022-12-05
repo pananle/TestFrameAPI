@@ -2,11 +2,11 @@
 # 订单模块
 
 def postOrderData():
-    """ 添加登录用户body模板 """
+    """ 添加订单body模板 """
     data = {
-  "receiveId": 1640,
+  "receiveId": 2027,
   "couponId": 0,
-  "price": "1.00",
+  "price": "99.00",
   "shops": [
     {
       "shopId": 95,
@@ -17,7 +17,7 @@ def postOrderData():
       },
       "skus": [
         {
-          "skuId": 2091,
+          "skuId": 591,
           "number": 1,
           "selected": 1,
           "platformSeckillId": 0,
@@ -27,6 +27,7 @@ def postOrderData():
           "priceId": 0,
           "composeId": 0,
           "sceneId": 0,
+          "useMember": 'false',
           "buyerCouponId": 0,
           "buyerShopCouponId": 0
         }
