@@ -7,14 +7,14 @@
 
 import requests
 
-from Comm import Log
+from Comm import loggerController
 from Conf import config
 
 
 class Session:
     def __init__(self):
         self.config = config.Config()
-        self.log = Log.MyLog()
+        self.log = loggerController.log()
 
     def get_session(self, env):
         """

@@ -7,43 +7,45 @@
 # '--allure_stories=测试模块_demo1, 测试模块_demo2'
 # '--allure_features=测试features'
 """
-import os
+
+
+from Comm.Email import send_email
 import pytest
-from Comm import loggerController
 from Comm import Shell
 from Conf import config
 from Comm import Email
-import warnings
-warnings.filterwarnings("ignore")
+import unittest
+import time
+import os
+import logging
+from HTMLTestRunner import HTMLTestRunner
 
 
-if __name__ == '__main__':
-    conf = config.Config()
-    log = loggerController.ApiAutoLog()
-    log.info('初始化配置文件, path=' + conf.conf_path)
 
-    # 获取报告输出位置
-    shell = Shell.Shell()
-    xml_report_path = conf.xml_report_path
-    html_report_path = conf.html_report_path
+# 获取项目的根目录
+test_dir = os.path.join(os.getcwd())
 
-    # 定义测试集
-    dir = os.path.split(os.path.abspath(__file__))[0]
-    test_case_path = dir + '/TestCases/test_init.py'
-    args = ['-s', '-q', '--alluredir', xml_report_path]
-    pytest.main(args)
+# 自动搜索项目根目录下的所有case，构造测试集；返回TestSuite对象
+discover = unittest.defaultTestLoader.discover(test_dir, pattern='test_*.py')
 
-    cmd = 'allure generate %s -o %s' % (xml_report_path, html_report_path)
+# 实例化TextTestRunner类
+# runner = unittest.TextTestRunner(verbosity=2)
 
-    try:
-        shell.invoke(cmd)
-    except Exception:
-        log.error('执行用例失败，请检查环境配置')
-        raise
+now = time.strftime('%Y-%m-%d %H_%M_%S')  # 获取当前日期
+result = test_dir + '\\result\\' + now + '_result.html'  # 测试报告的完整路径
+log = test_dir + '\\result\\' + now + '_log.txt'  # 日志的完整路径
 
-    try:
-        mail = Email.SendMail()
-        mail.sendMail()
-    except Exception as e:
-        log.error('发送邮件失败，请检查邮件配置')
-        raise
+
+logging.basicConfig(filename=log, level=logging.INFO,
+                    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')  # filename 日志文件路径 level 日志的级别 format 格式
+
+fp = open(result, 'wb')  # wb方式写入
+runner = HTMLTestRunner(stream=fp, title='测试报告', description='cereshop项目接口自动化执行', verbosity=2)  # 构造runner
+
+# 使用run()方法运行测试套件（即运行测试套件中的所有用例）
+runner.run(discover)
+report_path1 = os.path.join(test_dir, result)
+report_path2 = os.path.join(test_dir, log)
+report_path = (report_path1,report_path2)
+print(report_path)
+send_email(report_path)

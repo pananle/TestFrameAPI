@@ -4,54 +4,29 @@
 封装发送邮件的方法
 """
 import smtplib
-import time
-from email.header import Header
-from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
-from Comm import Consts
-from Comm.loggerController import log
-from Comm import loggerController
-from Conf.config import Config
+from email.mime.multipart import MIMEMultipart
+from email.mime.application import MIMEApplication
 
-class SendMail:
 
-    def __init__(self):
-        self.config = Config()
-        self.log = log
+def send_email(file_path):
+    smtp = smtplib.SMTP_SSL("smtp.163.com", 465)
+    smtp.login("pan081088@163.com", "CNTCRDZQLNARBFTU")
 
-    def sendMail(self):
-        msg = MIMEMultipart()
-        # body = """
-        # <h3>Hi，all</h3>
-        # <p>本次接口自动化测试报告如下。</p>
-        # """
-        # mail_body = MIMEText(body, _subtype='html', _charset='utf-8')
-        stress_body = Consts.STRESS_LIST
-        result_body = Consts.RESULT_LIST
-        body2 = 'Hi，all\n本次接口自动化测试报告如下：\n   接口响应时间集：%s\n   接口运行结果集：%s' % (stress_body, result_body)
-        mail_body2 = MIMEText(body2, _subtype='plain', _charset='utf-8')
-        tm = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
-        msg['Subject'] = Header("接口自动化测试报告"+"_"+tm, 'utf-8')
-        msg['From'] = self.config.sender
-        receivers = self.config.receiver
-        toclause = receivers.split(',')
-        msg['To'] = ",".join(toclause)
-        # msg.attach(mail_body)
+    smg = MIMEMultipart()
+    text_smg = MIMEText("cereshop的接口自动化测试报告", "plain", "utf8")
+    smg.attach(text_smg)
 
-        msg.attach(mail_body2)
+    file_msg = MIMEApplication(open(file_path[0], "rb").read())
+    file_msg.add_header('content-disposition', 'attachment', filename='接口自动化报告.html')
+    smg.attach(file_msg)
 
-        try:
-            smtp = smtplib.SMTP()
-            smtp.connect(self.config.smtpserver)
-            smtp.login(self.config.username, self.config.password)
-            smtp.sendmail(self.config.sender, toclause, msg.as_string())
-        except Exception as e:
-            print(e)
-            print("发送失败")
-            self.log.error("邮件发送失败，请检查邮件配置")
+    file_msg2 = MIMEText(open(file_path[1], "rb").read(),'base64','utf-8')
+    file_msg2.add_header('content-disposition', 'attachment', filename='接口自动化日志.txt')
+    smg.attach(file_msg2)
 
-        else:
-            print("发送成功")
-            self.log.info("邮件发送成功")
-        finally:
-            smtp.quit()
+    smg["Subject"] = "接口自动化测试"
+    smg["From"] = "pan081088@163.com"
+    smg["To"] = "pan081888@163.com"
+    smtp.send_message(smg, from_addr="pan081088@163.com", to_addrs="pan081888@163.com")
+

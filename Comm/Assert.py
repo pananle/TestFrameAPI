@@ -4,14 +4,14 @@
 封装Assert方法
 """
 
-from Comm import Log
+from Comm import loggerController
 from Comm import Consts
 import json
 
 
 class Assertions:
     def __init__(self):
-        self.log = Log.MyLog()
+        self.log = loggerController.ApiAutoLog()
 
     def assert_code(self, code, expected_code):
         """

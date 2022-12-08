@@ -1,6 +1,6 @@
 # -*- coding:utf-8 -*-
 # 登录用例
-
+import logging
 import requests
 import unittest
 import demjson
@@ -35,9 +35,10 @@ class Test_cart(unittest.TestCase):
         data = cart.postCatData()
         data['skuId'] = '2091'
         r = requests.post(self.url,data=demjson.encode(data),headers=headers)
+        print(r.json())
         assert r.status_code == 200
         assert r.json()["message"] == "成功"
-        log.info(f"case:添加购物车成功\n请求地址：{r.url}\t请求方式:{r.request.method}\n请求头：{r.request.headers}\n请求正文：{parse.unquote(r.request.body)}\n响应头：{r.headers}\n响应正文：{r.text}\n")
+        logging.info(f"case:添加购物车成功\n请求地址：{r.url}\t请求方式:{r.request.method}\n请求头：{r.request.headers}\n请求正文：{parse.unquote(r.request.body)}\n响应头：{r.headers}\n响应正文：{r.text}\n")
 
     def test_01(self):
         '''购物车商品加数量'''
@@ -45,9 +46,10 @@ class Test_cart(unittest.TestCase):
         data = cart.postCatData()
         data['number'] = '2'
         r = requests.post(self.url2, data=demjson.encode(data), headers=headers)
+        print(r.json())
         assert r.status_code == 200
         assert r.json()["message"] == "成功"
-        log.info(f"case:购物车商品加数量\n请求地址：{r.url}\t请求方式:{r.request.method}\n请求头：{r.request.headers}\n请求正文：{parse.unquote(r.request.body)}\n响应头：{r.headers}\n响应正文：{r.text}\n")
+        logging.info(f"case:购物车商品加数量\n请求地址：{r.url}\t请求方式:{r.request.method}\n请求头：{r.request.headers}\n请求正文：{parse.unquote(r.request.body)}\n响应头：{r.headers}\n响应正文：{r.text}\n")
 
     def test_02(self):
         '''购物车商品减数量'''
@@ -55,9 +57,10 @@ class Test_cart(unittest.TestCase):
         data = cart.postCatData()
         data['number'] = '1'
         r = requests.post(self.url2, data=demjson.encode(data), headers=headers)
+        print(r.json())
         assert r.status_code == 200
         assert r.json()["message"] == "成功"
-        log.info(f"case:购物车商品减数量\n请求地址：{r.url}\t请求方式:{r.request.method}\n请求头：{r.request.headers}\n请求正文：{parse.unquote(r.request.body)}\n响应头：{r.headers}\n响应正文：{r.text}\n")
+        logging.info(f"case:购物车商品减数量\n请求地址：{r.url}\t请求方式:{r.request.method}\n请求头：{r.request.headers}\n请求正文：{parse.unquote(r.request.body)}\n响应头：{r.headers}\n响应正文：{r.text}\n")
 
     def test_03(self):
         '''移除购物车'''
@@ -65,9 +68,10 @@ class Test_cart(unittest.TestCase):
         data = cart.postCatData()
         data['skuId'] = '2091'
         r = requests.post(self.url1, data=demjson.encode(data), headers=headers)
+        print(r.json())
         assert r.status_code == 200
         assert r.json()["message"] == "成功"
-        log.info(f"case:移除购物车\n请求地址：{r.url}\t请求方式:{r.request.method}\n请求头：{r.request.headers}\n请求正文：{parse.unquote(r.request.body)}\n响应头：{r.headers}\n响应正文：{r.text}\n")
+        logging.info(f"case:移除购物车\n请求地址：{r.url}\t请求方式:{r.request.method}\n请求头：{r.request.headers}\n请求正文：{parse.unquote(r.request.body)}\n响应头：{r.headers}\n响应正文：{r.text}\n")
 
 
 if __name__ == '__main__':

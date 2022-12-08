@@ -1,6 +1,6 @@
 # -*- coding:utf-8 -*-
 # 登录用例
-
+import logging
 import requests
 import unittest
 import demjson
@@ -34,9 +34,10 @@ class Test_order(unittest.TestCase):
         data = order.postOrderData()
         data['skuId'] = '591'
         r = requests.post(self.url,data=demjson.encode(data),headers=headers)
+        print(r.json())
         assert r.status_code == 200
         assert r.json()["message"] == "成功"
-        log.info(f"case:提交订单\n请求地址：{r.url}\t请求方式:{r.request.method}\n请求头：{r.request.headers}\n请求正文：{parse.unquote(r.request.body)}\n响应头：{r.headers}\n响应正文：{r.text}\n")
+        logging.info(f"case:提交订单\n请求地址：{r.url}\t请求方式:{r.request.method}\n请求头：{r.request.headers}\n请求正文：{parse.unquote(r.request.body)}\n响应头：{r.headers}\n响应正文：{r.text}\n")
 
     def test_01(self):
         '''取消订单'''
@@ -44,9 +45,10 @@ class Test_order(unittest.TestCase):
         data = order.postOrderData()
         data['orderId'] = '2'
         r = requests.post(self.url, data=demjson.encode(data), headers=headers)
+        print(r.json())
         assert r.status_code == 200
         assert r.json()["message"] == "成功"
-        log.info(f"case:取消订单\n请求地址：{r.url}\t请求方式:{r.request.method}\n请求头：{r.request.headers}\n请求正文：{parse.unquote(r.request.body)}\n响应头：{r.headers}\n响应正文：{r.text}\n")
+        logging.info(f"case:取消订单\n请求地址：{r.url}\t请求方式:{r.request.method}\n请求头：{r.request.headers}\n请求正文：{parse.unquote(r.request.body)}\n响应头：{r.headers}\n响应正文：{r.text}\n")
 
     def test_02(self):
         '''再次购买'''
@@ -54,9 +56,10 @@ class Test_order(unittest.TestCase):
         data = order.postOrderData()
         data['number'] = '1'
         r = requests.post(self.url, data=demjson.encode(data), headers=headers)
+        print(r.json())
         assert r.status_code == 200
         assert r.json()["message"] == "成功"
-        log.info(f"case:再次购买\n请求地址：{r.url}\t请求方式:{r.request.method}\n请求头：{r.request.headers}\n请求正文：{parse.unquote(r.request.body)}\n响应头：{r.headers}\n响应正文：{r.text}\n")
+        logging.info(f"case:再次购买\n请求地址：{r.url}\t请求方式:{r.request.method}\n请求头：{r.request.headers}\n请求正文：{parse.unquote(r.request.body)}\n响应头：{r.headers}\n响应正文：{r.text}\n")
 
     def test_03(self):
         '''删除订单'''
@@ -64,9 +67,10 @@ class Test_order(unittest.TestCase):
         data = order.postOrderData()
         data['skuId'] = '591'
         r = requests.post(self.url, data=demjson.encode(data), headers=headers)
+        print(r.json())
         assert r.status_code == 200
         assert r.json()["message"] == "成功"
-        log.info(f"case:删除订单\n请求地址：{r.url}\t请求方式:{r.request.method}\n请求头：{r.request.headers}\n请求正文：{parse.unquote(r.request.body)}\n响应头：{r.headers}\n响应正文：{r.text}\n")
+        logging.info(f"case:删除订单\n请求地址：{r.url}\t请求方式:{r.request.method}\n请求头：{r.request.headers}\n请求正文：{parse.unquote(r.request.body)}\n响应头：{r.headers}\n响应正文：{r.text}\n")
 
 
 if __name__ == '__main__':
