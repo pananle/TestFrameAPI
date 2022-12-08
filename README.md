@@ -18,7 +18,7 @@ TestCases   用例和数据模版
 mainAPI     运行数据
 
 
-直接运行runAPI即可发送邮件报告。
+直接运行mainAPI即可发送邮件报告。
 
 
 
