@@ -18,5 +18,9 @@ TestCases   用例和数据模版
 mainAPI     运行数据
 
 
+直接运行runAPI即可发送邮件报告。
+
+
+
  命令行：
     pytest --report=cereshop.html --title=测试报告 --tester=anle --desc=多商户业务逻辑  --template=2
